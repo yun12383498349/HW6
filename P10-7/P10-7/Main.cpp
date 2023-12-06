@@ -1,8 +1,8 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 struct card {
-	char *face;
-	char *suit;
+	const char *face;
+	const char *suit;
 };
 
 int main(void) {
@@ -14,7 +14,7 @@ int main(void) {
 
 	cardPtr = &aCard;
 
-	printf("%s%s%s\n%s%s%s\n%s%s%s\n", aCard.face, "of", aCard.suit, cardPtr->face, "of", cardPtr->suit, (*cardPtr).face, "of", (*cardPtr).suit);
+	printf("%s %s %s\n%s %s %s\n%s %s %s\n", aCard.face, "of", aCard.suit, cardPtr->face, "of", cardPtr->suit, (*cardPtr).face, "of", (*cardPtr).suit);
 
 	return 0;
 
